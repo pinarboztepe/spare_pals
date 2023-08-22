@@ -6,13 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-<<<<<<< HEAD
-User.create(email: "visitor@lewagon.com", password: "123456789", username: "bobby")
-
-
-
-Pal.create(name: "Dave", location: "Champ de Mars, 5 Av. Anatole France, 75007 Paris", price: 30, user_id: 1, rating:4)
-=======
+puts "Cleaning DB (don't freak out)..."
 puts "Cleaning DB..."
 Pal.destroy_all
 User.destroy_all
@@ -22,7 +16,6 @@ john = User.create(email: "johnl@lewagon.com", password: "112233445", username: 
 paul = User.create(email: "paulm@lewagon.com", password: "221133445", username: "Paul")
 ringo = User.create(email: "ringos@lewagon.com", password: "332244556", username: "Ringo")
 george = User.create(email: "georgeh@lewagon.com", password: "556677889", username: "George")
-
 
 Pal.create(name: "Dave", location: "Champ de Mars, 5 Av. Anatole France, 75007 Paris", price: 30, user: bobby, rating: 4)
 Pal.create(name: "Taylor", location: "Times Square, 42 Broadway, New York, NY 10036", price: 40, user: bobby, rating: 3)
@@ -35,11 +28,10 @@ Pal.create(name: "William", location: "Christ the Redeemer, Corcovado Mountain, 
 Pal.create(name: "Franz", location: "The Great Wall of China, Badaling, Yanqing District, Beijing, China", price: 80, user: george, rating: 5)
 Pal.create(name: "Krist", location: "Brandenburg Gate, Pariser Platz, 10117 Berlin, Germany", price: 57, user: george, rating: 3)
 
-
+puts "DB filled with #{User.count} users, and #{Pal.count} pals."
 # pals.each do |pal|
 #   puts "saving #{pal.name}"
 #   pal.save
 # end
 
 # puts "Finished!"
->>>>>>> a4d8584e047e522b923a75289c00bff48889109b
