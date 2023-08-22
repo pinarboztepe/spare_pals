@@ -1,4 +1,7 @@
 class PalsController < ApplicationController
+  def show
+    @pal = Pal.find(params[:id])
+  end
 
   def index
     @pals = Pal.all
