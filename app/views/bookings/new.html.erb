@@ -1,1 +1,9 @@
-<h1>Test view for bookings </h1>
+<h2> Create your booking with <%= @pal.name %></h2>
+
+<div>
+<%= simple_form_for [@pal, @booking] do |f| %>
+<%= f.input :start_date %>
+<%= f.input :end_date %>
+<%= f.submit :create %>
+<% end  %>
+</div>
