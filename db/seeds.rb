@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts "Cleaning DB (don't freak out)..."
+puts "Cleaning DB..."
 Pal.destroy_all
 User.destroy_all
 
