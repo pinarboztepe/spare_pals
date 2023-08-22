@@ -1,1 +1,7 @@
-<h1>Test view for bookings </h1>
+<h1> Bookings </h1>
+
+<h2> Create your booking with <%= @pal.name %></h2>
+
+<%= simple_form_for [@pal, @booking] do |f| %>
+<%= f.input :name, placeholder: "Enter your name:" %>
+<%= f.submit class: "btn btn-flat" %>
