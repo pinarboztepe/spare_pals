@@ -1,10 +1,14 @@
-<h1> <%= @pal.name %> </h1>
+<div class="container mt-4">
+  <%= link_to "Return to all pals", pals_path %>
 
-<h4>Hello from the Pals show page</h4>
-<br>
-<h1>Pal's name: <%= @pal.name %></h1>
-<h1>Pal's location: <%= @pal.location %></h1>
-<h1>Pal's price: £<%= @pal.price %></h1>
-<h1>Pal's rating: <%= @pal.rating %></h1>
+  <h1><%= @pal.name %> Profile Information</h1>
 
-<%= link_to "Book this pal", new_pal_booking_path(@pal), class: 'btn btn-success' %>
+  <div class="mt-4">
+    <p><strong>Pal's name:</strong> <%= @pal.name %></p>
+    <p><strong>Pal's location:</strong> <%= @pal.location %></p>
+    <p><strong>Pal's price:</strong> £<%= @pal.price %></p>
+    <p><strong>Pal's rating:</strong> <%= @pal.rating %></p>
+  </div>
+
+  <%= link_to "Book this pal", new_pal_booking_path(@pal), class: 'btn btn-success mt-4' %>
+</div>
