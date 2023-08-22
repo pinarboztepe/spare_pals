@@ -6,13 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-<<<<<<< HEAD
-User.create(email: "visitor@lewagon.com", password: "123456789", username: "bobby")
-
-
-
-Pal.create(name: "Dave", location: "Champ de Mars, 5 Av. Anatole France, 75007 Paris", price: 30, user_id: 1, rating:4)
-=======
 puts "Cleaning DB..."
 Pal.destroy_all
 User.destroy_all
@@ -42,4 +35,3 @@ Pal.create(name: "Krist", location: "Brandenburg Gate, Pariser Platz, 10117 Berl
 # end
 
 # puts "Finished!"
->>>>>>> a4d8584e047e522b923a75289c00bff48889109b
