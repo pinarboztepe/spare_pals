@@ -1,0 +1,10 @@
+<h1> Bookings index view </h1>
+
+<% @bookings.each do |booking| %>
+  <div class="my-3">
+    This pal is the friend of: <%= booking.pal.user.email %>
+    This pal: <%= booking.pal.name %>
+    <%= booking.start_date %>
+    <%= booking.end_date %>
+  </div>
+<% end %>
