@@ -1,5 +1,10 @@
 class PalsController < ApplicationController
+
   skip_before_action :authenticate_user!, only: [:index, :show]
+
+  def show
+    @pal = Pal.find(params[:id])
+  end
 
   def index
     @pals = Pal.all
