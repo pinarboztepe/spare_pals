@@ -1,0 +1,9 @@
+<h1>List of Pals </h1>
+
+<ul class="pals-list">
+
+<% @pals.each do |pal| %>
+<li> <%= link_to pal.name, pals_path(pal) %></li>
+<% end  %>
+
+</ul>

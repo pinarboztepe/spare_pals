@@ -7,3 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 User.create(email: "visitor@lewagon.com", password: "123456789", username: "bobby")
+
+
+
+Pal.create(name: "Dave", location: "Champ de Mars, 5 Av. Anatole France, 75007 Paris", price: 30, user_id: 1, rating:4)
