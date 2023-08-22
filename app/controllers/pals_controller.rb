@@ -13,6 +13,8 @@ class PalsController < ApplicationController
   def show
     @pal = Pal.find(params[:id])
   end
+<<<<<<< HEAD
+=======
 
   def new
     @pal = Pal.new
@@ -33,4 +35,5 @@ class PalsController < ApplicationController
   def pal_params
     params.require(:pal).permit(:name, :location, :price)
   end
+>>>>>>> a4d8584e047e522b923a75289c00bff48889109b
 end
