@@ -1,0 +1,10 @@
+<h1>Pals#new</h1>
+<p>Find me in app/views/pals/new.html.erb</p>
+
+<div class="container">
+<h1>Add a New Pal</h1>
+  <%= simple_form_for(@pal) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit %>
+  <% end %>
+</div>
