@@ -1,10 +1,20 @@
-<h1> <%= @pal.name %> </h1>
-
-<h4>Hello from the Pals show page</h4>
-<br>
-<h1>Pal's name: <%= @pal.name %></h1>
-<h1>Pal's location: <%= @pal.location %></h1>
-<h1>Pal's price: £<%= @pal.price %></h1>
-<h1>Pal's rating: <%= @pal.rating %></h1>
-
-<%= link_to "Create a booking", new_pal_booking_path(@pal), class: 'btn btn-success' %>
+<div class="banner">
+  <div class="container">
+    <div class="card">
+        <h1>
+         <div class="card-image"><img src="https://thispersondoesnotexist.com/" alt="Person Image" class="pal-name"></div>
+          <%= @pal.name %>
+          <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
+          <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
+          <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
+          <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
+        </h1>
+    </div>
+    <div class="card">
+      <h1>Pal's location: <%= @pal.location %></h1>
+      <h1>Pal's price: £<%= @pal.price %></h1>
+      <h1>Pal's rating: <%= @pal.rating %></h1>
+      <%= link_to "Create a booking", new_pal_booking_path(@pal), class: 'btn btn-success' %>
+    </div>
+  </div>
+</div>
