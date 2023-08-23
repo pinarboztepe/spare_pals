@@ -1,6 +1,6 @@
 <h1>My Bookings List</h1>
 
-<% @bookings.each do |booking| %>
+<% @current_user.bookings.each do |booking| %>
   <div class="booking-card">
     <ul>
       <li>
