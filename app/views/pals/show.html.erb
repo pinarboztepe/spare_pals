@@ -1,8 +1,5 @@
-
-<div class="banner">
-  <div class="container">
-      <%= link_to "Return to all pals", pals_path %>
-    <div class="card">
+<div class="container">
+    <div class="card-1">
         <h1>
          <div class="card-image"><img src="https://thispersondoesnotexist.com/" alt="Person Image" class="pal-name"></div>
           <%= @pal.name %>
@@ -10,14 +7,16 @@
           <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
           <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
           <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
+          <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
         </h1>
     </div>
-    <div class="card">
-      <p><strong>Pal's name:</strong> <%= @pal.name %></p>
-      <p><strong>Pal's location:</strong> <%= @pal.location %></p>
-      <p><strong>Pal's price:</strong> £<%= @pal.price %></p>
-      <p><strong>Pal's rating:</strong> <%= @pal.rating %></p>
-      <%= link_to "Book this pal", new_pal_booking_path(@pal), class: 'btn btn-success' %>
+    <div class="card-2">
+        <p><strong>Pal's name:</strong> <%= @pal.name %></p>
+        <p><strong>Pal's location:</strong> <%= @pal.location %></p>
+        <p><strong>Pal's price:</strong> £<%= @pal.price %></p>
+        <p><strong>Pal's rating:</strong> <%= @pal.rating %></p>
+        <div class="button-container">
+        <%= link_to "Book this pal", new_pal_booking_path(@pal), class: 'btn btn-primary btn-small' %>
+      </div>
     </div>
-  </div>
 </div>
