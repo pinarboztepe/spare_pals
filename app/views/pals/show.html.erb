@@ -1,5 +1,7 @@
+
 <div class="banner">
   <div class="container">
+      <%= link_to "Return to all pals", pals_path %>
     <div class="card">
         <h1>
          <div class="card-image"><img src="https://thispersondoesnotexist.com/" alt="Person Image" class="pal-name"></div>
@@ -11,10 +13,11 @@
         </h1>
     </div>
     <div class="card">
-      <h1>Pal's location: <%= @pal.location %></h1>
-      <h1>Pal's price: £<%= @pal.price %></h1>
-      <h1>Pal's rating: <%= @pal.rating %></h1>
-      <%= link_to "Create a booking", new_pal_booking_path(@pal), class: 'btn btn-success' %>
+      <p><strong>Pal's name:</strong> <%= @pal.name %></p>
+      <p><strong>Pal's location:</strong> <%= @pal.location %></p>
+      <p><strong>Pal's price:</strong> £<%= @pal.price %></p>
+      <p><strong>Pal's rating:</strong> <%= @pal.rating %></p>
+      <%= link_to "Book this pal", new_pal_booking_path(@pal), class: 'btn btn-success' %>
     </div>
   </div>
 </div>

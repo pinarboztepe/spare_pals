@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :pals, only: [:index, :new, :create, :show] do
-  resources :bookings, only: [:new, :create]
+    # This bookings routes are used to create a new booking with a pal id
+    resources :bookings, only: [:new, :create]
   end
+
+  # This bookings routes is to show all current_user bookings (without any pal id)
+  resources :bookings, only: [:index, :show, :destroy]
 end
