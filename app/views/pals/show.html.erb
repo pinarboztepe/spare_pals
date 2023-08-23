@@ -1,6 +1,6 @@
 <h1> <%= @pal.name %> </h1>
 
-<h4>Hello from the Pals show page</h4>
+<%# <h4>Hello from the Pals show page</h4> %>
 <br>
 <h1>Pal's name: <%= @pal.name %></h1>
 <h1>Pal's location: <%= @pal.location %></h1>
@@ -8,3 +8,4 @@
 <h1>Pal's rating: <%= @pal.rating %></h1>
 
 <%= link_to "Book this pal", new_pal_booking_path(@pal), class: 'btn btn-success' %>
+<%= link_to 'Back to pals', pals_path, class: 'btn btn-primary' %>
