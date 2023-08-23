@@ -1,9 +1,21 @@
-<h2> Create your booking with <%= @pal.name %></h2>
+<div class="container">
+  <h2>Create your booking with <%= @pal.name %></h2>
 
-<div>
-<%= simple_form_for [@pal, @booking] do |f| %>
-<%= f.input :start_date %>
-<%= f.input :end_date %>
-<%= f.submit :create %>
-<% end  %>
+  <div class="row">
+    <div class="col-md-6">
+      <%= simple_form_for [@pal, @booking], html: { class: 'form' } do |f| %>
+        <div class="form-group">
+          <%= f.input :start_date, input_html: { class: 'form-control' } %>
+        </div>
+        <div class="form-group">
+          <%= f.input :end_date, input_html: { class: 'form-control' } %>
+        </div>
+        <div class="form-group">
+          <%= f.input :comments, input_html: { class: 'form-control' } %>
+        </div>
+        <%= f.button :submit, 'Create', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
 </div>
+

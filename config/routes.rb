@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   end
 
   # This bookings routes is to show all current_user bookings (without any pal id)
-  resources :bookings, only: [:index]
+  resources :bookings, only: [:index, :show, :destroy]
 end
