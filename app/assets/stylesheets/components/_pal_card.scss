@@ -10,7 +10,7 @@
   margin: 20px;
   width: 250px;
   height: 300px;
-  border: solid 4px black;
+  border: solid 3px black;
   border-radius: 8px;
   background-color: white;
   text-align: center;
@@ -21,17 +21,21 @@
     width: 90%;
     height: 65%;
     background-image: url("https://thispersondoesnotexist.com");
-    object-fit: fill;
+    object-fit: contain;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     border-radius: 4px;
-    border: solid 4px black;
+    border: solid 3px black;
+  }
+  h3 {
+    margin-top: 10px;
   }
 }
 
 .pal_name {
   a {
+    margin-top: 6px;
   color: black;
   text-decoration: none;
   font-weight: 500;
