@@ -17,6 +17,9 @@ class PalsController < ApplicationController
   def create
     @pal = Pal.new(pal_params)
     @pal.user = current_user
+    if @pal.rating.nil?
+      @pal.rating = 0
+    end
     if @pal.save
       redirect_to pal_path(@pal)
     else
