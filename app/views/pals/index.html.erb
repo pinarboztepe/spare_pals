@@ -7,7 +7,11 @@
       <%# <div class="pal_img"> %>
         <img class="img">
         <h3 class="pal_name"><%= link_to pal.name, pal_path(pal) %></h3>
-        <h3 class="stars">⭐⭐⭐⭐⭐</h3>
+        <div class="stars">
+        <% pal.rating.times do %>
+        <h3>⭐️</h3>
+        <% end %>
+        </div>
       </div>
     <% end %>
   </div>
