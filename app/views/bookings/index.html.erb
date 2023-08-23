@@ -1,13 +1,14 @@
-  <h1> My Bookings List </h1>
+<h1>My Bookings List</h1>
 
-
-  <% @bookings.each do |booking| %>
-    <div class="booking-card">
+<% @bookings.each do |booking| %>
+  <div class="booking-card">
     <ul>
-       <li> This pal is the friend of: <%= booking.pal.user.email %>
-        This pal: <%= booking.pal.name %>
+      <li>
+        The booking number: <%= booking.id %> with <%= booking.pal.name %>
         Start Date: <%= booking.start_date %>
-        End Date: <%= booking.end_date %> </li>
+        End Date: <%= booking.end_date %>
+        <%= link_to "View Details", booking_path(booking), class: "btn btn-primary" %>
+      </li>
     </ul>
-    </div>
-  <% end %>
+  </div>
+<% end %>
