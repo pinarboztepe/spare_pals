@@ -7,6 +7,6 @@
       <p class="card-text"><strong>Start Date:</strong> <%= @booking.start_date %></p>
       <p class="card-text"><strong>End Date:</strong> <%= @booking.end_date %></p>
       <p class="card-text"><strong>Comments:</strong> <%= @booking.comments %></p>
-    </div>
+      <%= link_to "Delete", booking_path(@booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
   </div>
 </div>
