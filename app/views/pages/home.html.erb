@@ -1,14 +1,19 @@
+  <br>
+  <br>
+  <br>
 <div class="home_container">
+  <p>Tired of your pals? Rent some new ones!</p>
   <h1>Spare Pals</h1>
-  <p>A sidekick for movie night? ✅</p>
-  <p>A partner in crime for a hospital adventure?! ✅</p>
-  <p>A pall for... anything? ✅</p>
+  <br>
+  <style>
+  body {
+    background-image: url("<%= asset_path('Friends.jpeg') %>");
+    background-size: cover;
+  }
+</style>
   <%# We've got your back. Find your next epic friend and let the good times roll!" %>
   <br>
-  <br>
-  <br>
-
-  <%= link_to "Find me one!", pals_path, class: "hero_btn" %>
+  <%= link_to "Find me a pal!", pals_path, class: "hero_btn" %>
   <br>
   <br>
   <br>
@@ -17,5 +22,9 @@
   <br>
   <br>
   <br>
-  <h6>*100% above-board 👀</h6>
+    <h5>100% ethical ✅</h5>
+    <h5>100% above-board ✅</h5>
+    <h5>100% not shady ✅</h5>
+  <br>
+  <br>
 </div>
