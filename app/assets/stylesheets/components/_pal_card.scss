@@ -16,6 +16,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
   .img {
     margin-top: 12px;
     width: 90%;
@@ -31,6 +32,13 @@
   h3 {
     margin-top: 10px;
   }
+  .stars {
+    justify-content: center;
+    display: flex;
+    // flex-direction: row;
+    text-align: center;
+    // margin-bottom: 50px;
+  }
 }
 
 .pal_name {
@@ -40,8 +48,4 @@
   text-decoration: none;
   font-weight: 500;
   }
-}
-
-.stars {
-  text-align: center;
 }
