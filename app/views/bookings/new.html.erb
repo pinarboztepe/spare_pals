@@ -2,7 +2,7 @@
 <div class="container">
     <div class="card-1">
         <h1>
-         <div class="card-image"><img src="https://thispersondoesnotexist.com/" alt="Person Image" class="pal-name"></div>
+         <%= cl_image_tag @pal.photo.key, crop: :fill , class: "card-image"%>
           <%= @pal.name %>
           <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
           <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
