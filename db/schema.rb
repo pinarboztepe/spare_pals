@@ -59,9 +59,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_24_104938) do
     t.integer "rating"
     t.string "location"
     t.integer "price"
+    t.string "interest"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
     t.float "latitude"
     t.float "longitude"
     t.index ["user_id"], name: "index_pals_on_user_id"
