@@ -2,6 +2,7 @@ body {
   background-color: rgb(255, 98, 0);
 }
 
+
 .container {
   display: flex;
   flex-direction: row;
@@ -68,11 +69,13 @@ body {
 .card-image {
   margin-top: 12px;
   width: 90%;
-  height: 65%;
+  height: 5%;
   justify-content: center;
   align-items: center;
   padding: 0;
   margin: 0 auto;
+  border: 5px solid black;
+  border-radius: 15px;
 }
 
 .button-container {

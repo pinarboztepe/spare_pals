@@ -1,5 +1,5 @@
 <h2>Create your booking with <%= @pal.name %></h2>
-<div class="container">
+<div class="container mt-0">
   <div class="d-flex">
     <div class="card-1">
         <h1>
@@ -15,14 +15,10 @@
         </h1>
       </div>
     </div>
-
-    <div class="container">
-    <div class="card-2">
-        <p><strong>Pal's name:</strong> <%= @pal.name %></p>
-        <p><strong>Pal's location:</strong> <%= @pal.location %></p>
-        <p><strong>Pal's price:</strong> £<%= @pal.price %></p>
-        <p><strong>Pal's rating:</strong> <%= @pal.rating %></p>
+  
     </div>
+    <div class="container mt-0">
+
       <div>
         <div class="row mt-0">
           <%= simple_form_for [@pal, @booking], html: { class: 'form' } do |f| %>
@@ -35,7 +31,7 @@
             <div class=“form-group”>
               <%= f.input :comments, input_html: { class: 'form-control' } %>
             </div>
-            <%= f.button :submit, 'Create Bookings', class: 'btn btn-primary' %>
+            <%= f.button :submit, 'Create Bookings', class: 'btn btn-warning' %>
           <% end %>
         </div>
 
