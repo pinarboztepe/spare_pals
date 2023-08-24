@@ -8,7 +8,6 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-
   def new
     @pal = Pal.find(params[:pal_id])
     @booking = Booking.new
@@ -31,7 +30,6 @@ class BookingsController < ApplicationController
     @booking.destroy
     redirect_to bookings_path, notice: 'Booking has been deleted!'
   end
-
 
   private
 

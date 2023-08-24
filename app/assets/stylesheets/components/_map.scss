@@ -1,0 +1,13 @@
+.mapboxgl-popup {
+  max-width: 300px;
+  color: black;
+}
+
+.mapboxgl-popup-content {
+  padding: 20px;
+  background-color: rgb(255, 98, 0);
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  border-radius: 8px;
+}

@@ -4,6 +4,14 @@ class PalsController < ApplicationController
 
   def index
     @pals = Pal.all
+    @markers = @pals.geocoded.map do |pal|
+      {
+        lat: pal.latitude,
+        lng: pal.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {pal: pal}),
+        marker_html: render_to_string(partial: "marker", locals: {pal: pal})
+      }
+    end
   end
 
   def show
@@ -17,6 +25,9 @@ class PalsController < ApplicationController
   def create
     @pal = Pal.new(pal_params)
     @pal.user = current_user
+    if @pal.rating.nil?
+      @pal.rating = 0
+    end
     if @pal.save
       redirect_to pal_path(@pal)
     else
@@ -27,6 +38,6 @@ class PalsController < ApplicationController
   private
 
   def pal_params
-    params.require(:pal).permit(:name, :location, :price)
+    params.require(:pal).permit(:name, :location, :price, :photo)
   end
 end

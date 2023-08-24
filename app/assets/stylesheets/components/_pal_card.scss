@@ -9,43 +9,86 @@
 .pal_card {
   margin: 20px;
   width: 250px;
-  height: 300px;
+  height: 400px;
   border: solid 3px black;
   border-radius: 8px;
   background-color: white;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 20px;
-  .img {
-    margin-top: 12px;
-    width: 90%;
+  padding: 12px;
+  justify-content: space-between;
+  img {
+    width: 100%;
     height: 65%;
-    background-image: url("https://thispersondoesnotexist.com");
-    object-fit: contain;
+    // background-image: url("https://thispersondoesnotexist.com");
+    object-fit:cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     border-radius: 4px;
     border: solid 3px black;
   }
-  h3 {
-    margin-top: 10px;
-  }
+  // h3.pal_name{
+  //   margin-top: 10px;
+  //   text-decoration: none !important;
+  // }
+
   .stars {
     justify-content: center;
     display: flex;
-    // flex-direction: row;
     text-align: center;
-    // margin-bottom: 50px;
+  }
+  text-decoration: none;
+}
+
+.pal_card:hover {
+  transform:translateY(-12px);
+  transition: 0.3s;
+  box-shadow: 0px 10px 0px #000000;
+  cursor: pointer;
+  background-color: #0000ff;
+  .stars, h3, .pal_info {
+    display: none;
+  }
+  &::after {
+    content: "Hang with me!";
+    display: block;
+    font-size: 25px;
+    color: white;
+    margin-top: 30px;
   }
 }
 
-.pal_name {
-  a {
-    margin-top: 6px;
+.pal_info {
+  margin-top: 6px;
   color: black;
   text-decoration: none;
   font-weight: 500;
+  // display: flex;
+  // flex-wrap: wrap;
+  font-size: 0.5em;
+}
+
+.trait {
+  justify-content: space-between;
+  display: flex;
+  background-color: rgb(227, 227, 227);
+  border-radius: 18px;
+  font-size: 0.6em !important;
+  margin-top: 5px;
+  // justify-content: center;
+  align-items: center;
+  padding: 10px;
+  h6 {
+    margin: 0px;
   }
+
+}
+
+.hide-me {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: inline;
+  color: rgb(0, 0, 0);
 }
