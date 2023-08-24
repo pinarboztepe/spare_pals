@@ -2,7 +2,7 @@
 <div class="container">
     <div class="card-1">
         <h1>
-         <div class="card-image"><img src="https://thispersondoesnotexist.com/" alt="Person Image" class="pal-name"></div>
+         <%= cl_image_tag @pal.photo.key, crop: :fill , class: "card-image"%>
           <%= @pal.name %>
           <br>
           <% @pal.rating.times do %>

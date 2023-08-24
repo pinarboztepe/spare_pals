@@ -79,6 +79,11 @@ file = URI.open("https://marvel-b1-cdn.bc0a.com/f00000000260899/www.heidrick.com
 mary.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 mary.save!
 
+moana = Pal.new(name: "Moana", location: "Honolulu, Hawaii", price: 800, user: george, rating: 4)
+file = URI.open("https://marvel-b1-cdn.bc0a.com/f00000000260899/www.heidrick.com/-/media/heidrickcom/images/consultants/m/macdonald_mary_18553/macdonald_mary_860x860.jpg")
+moana.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+moana.save!
+
 puts "DB filled with #{User.count} users, and #{Pal.count} pals."
 # pals.each do |pal|
 #   puts "saving #{pal.name}"
