@@ -9,7 +9,24 @@
       <% @pals.each do |pal| %>
         <%= link_to new_pal_booking_path(pal), class: "pal_card myDIV" do %>
           <%= cl_image_tag pal.photo.key, crop: :fill %>
-          <h3 class="pal_name"><%= pal.name %></h3>
+          <div class="pal_info">
+            <div class="trait">
+              <h6>Name:</h6>
+              <h6><%= pal.name %></h6>
+            </div>
+            <div class="trait">
+              <h6>Job:</h6>
+              <h6><%= pal.job %></h6>
+            </div>
+            <div class="trait">
+              <h6>Fav emoji:</h6>
+              <h6><%= pal.emoji %></h6>
+            </div>
+            <div class="trait">
+              <h6>In a word:</h6>
+              <h6><%= pal.word %></h6>
+            </div>
+          </div>
           <div class="hide-me">Hang with me!</div>
           <div class="stars">
             <% pal.rating.times do %>

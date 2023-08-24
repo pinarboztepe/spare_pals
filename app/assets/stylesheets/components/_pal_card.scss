@@ -9,7 +9,7 @@
 .pal_card {
   margin: 20px;
   width: 250px;
-  height: 300px;
+  height: 400px;
   border: solid 3px black;
   border-radius: 8px;
   background-color: white;
@@ -46,7 +46,7 @@
   box-shadow: 0px 10px 0px #000000;
   cursor: pointer;
   background-color: #0000ff;
-  .stars, h3 {
+  .stars, h3, .pal_info {
     display: none;
   }
   &::after {
@@ -58,11 +58,30 @@
   }
 }
 
-.pal_name {
+.pal_info {
   margin-top: 6px;
   color: black;
   text-decoration: none;
   font-weight: 500;
+  // display: flex;
+  // flex-wrap: wrap;
+  font-size: 0.5em;
+}
+
+.trait {
+  justify-content: space-between;
+  display: flex;
+  background-color: rgb(227, 227, 227);
+  border-radius: 18px;
+  font-size: 0.6em !important;
+  margin-top: 5px;
+  // justify-content: center;
+  align-items: center;
+  padding: 10px;
+  h6 {
+    margin: 0px;
+  }
+
 }
 
 .hide-me {

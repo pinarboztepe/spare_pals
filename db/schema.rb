@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_24_104938) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_24_151152) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -66,6 +66,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_24_104938) do
     t.string "image_url"
     t.float "latitude"
     t.float "longitude"
+    t.string "emoji"
+    t.text "intro"
+    t.string "job"
+    t.string "word"
     t.index ["user_id"], name: "index_pals_on_user_id"
   end
 
