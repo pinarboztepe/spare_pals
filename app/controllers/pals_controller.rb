@@ -4,6 +4,12 @@ class PalsController < ApplicationController
 
   def index
     @pals = Pal.all
+    @markers = @pals.geocoded.map do |pal|
+      {
+        lat: pal.latitude,
+        lng: pal.longitude
+      }
+    end
   end
 
   def show

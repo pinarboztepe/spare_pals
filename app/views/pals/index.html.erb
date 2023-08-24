@@ -8,7 +8,7 @@
   <div class="cards_wrapper">
     <% @pals.each do |pal| %>
       <%= link_to new_pal_booking_path(pal), class: "pal_card myDIV" do %>
-        <%= cl_image_tag pal.photo.key, height: 180, width: 180, crop: :fill %>
+        <%= cl_image_tag pal.photo.key, crop: :fill %>
         <h3 class="pal_name"><%= pal.name %></h3>
         <div class="hide-me">Hang with me!</div>
         <div class="stars">
@@ -18,5 +18,11 @@
         </div>
       <% end %>
     <% end %>
+  </div>
+  <div  data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        id="map"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+        style="width: 100%; height: 300px;">
   </div>
 </div>
