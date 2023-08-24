@@ -1,5 +1,6 @@
 <h2>Create your booking with <%= @pal.name %></h2>
 <div class="container">
+  <div class="d-flex">
     <div class="card-1">
         <h1>
          <%= cl_image_tag @pal.photo.key, crop: :fill , class: "card-image"%>
@@ -27,14 +28,42 @@
       <%= simple_form_for [@pal, @booking], html: { class: 'form' } do |f| %>
         <div class="form-group">
           <%= f.input :start_date, html5: true, input_html: { class: 'form-control' } %>
+
         </div>
-        <div class=“form-group”>
-          <%= f.input :end_date, html5: true, input_html: { class: 'form-control' } %>
+        <div class="card-pal-stars">
+            <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
+            <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
+            <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
+            <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
+            <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
         </div>
-        <div class=“form-group”>
-          <%= f.input :comments, input_html: { class: 'form-control' } %>
+
+      </div>
+      <div>
+        <div class="row mt-0">
+          <%= simple_form_for [@pal, @booking], html: { class: 'form' } do |f| %>
+            <div class="form-group">
+              <%= f.input :start_date, html5: true, input_html: { class: 'form-control' } %>
+            </div>
+            <div class=“form-group”>
+              <%= f.input :end_date, html5: true, input_html: { class: 'form-control' } %>
+            </div>
+            <div class=“form-group”>
+              <%= f.input :comments, input_html: { class: 'form-control' } %>
+            </div>
+            <%= f.button :submit, 'Create Bookings', class: 'btn btn-primary' %>
+          <% end %>
         </div>
-        <%= f.button :submit, 'Create Bookings', class: 'btn btn-primary' %>
-      <% end %>
+
+
+        <div class="card-2">
+            <p><strong>Pal's name:</strong> <%= @pal.name %></p>
+            <p><strong>Pal's location:</strong> <%= @pal.location %></p>
+            <p><strong>Pal's price:</strong> £<%= @pal.price %></p>
+            <p><strong>Pal's rating:</strong> <%= @pal.rating %></p>
+            <div class="button-container">
+          </div>
+      </div>
     </div>
   </div>
+</div>
