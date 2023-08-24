@@ -36,6 +36,6 @@ class PalsController < ApplicationController
   private
 
   def pal_params
-    params.require(:pal).permit(:name, :location, :price)
+    params.require(:pal).permit(:name, :location, :price, :photo)
   end
 end
