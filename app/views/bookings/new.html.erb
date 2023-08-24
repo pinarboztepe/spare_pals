@@ -13,12 +13,9 @@
             <span class="d-none">☆</span>
           <% end %>
         </h1>
-      </div>
     </div>
-
     </div>
     <div class="container mt-0">
-
       <div>
         <div class="row mt-0">
           <%= simple_form_for [@pal, @booking], html: { class: 'form' } do |f| %>
@@ -34,13 +31,12 @@
             <%= f.button :submit, 'Create Bookings', class: 'btn btn-warning' %>
           <% end %>
         </div>
-
-
         <div class="card-2">
             <p><strong>Pal's name:</strong> <%= @pal.name %></p>
             <p><strong>Pal's location:</strong> <%= @pal.location %></p>
             <p><strong>Pal's price:</strong> £<%= @pal.price %></p>
             <p><strong>Pal's rating:</strong> <%= @pal.rating %></p>
+            <%# <div class="button-container"></div> %>
         </div>
     </div>
   </div>
