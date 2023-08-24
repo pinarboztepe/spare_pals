@@ -7,7 +7,9 @@ class PalsController < ApplicationController
     @markers = @pals.geocoded.map do |pal|
       {
         lat: pal.latitude,
-        lng: pal.longitude
+        lng: pal.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {pal: pal}),
+        marker_html: render_to_string(partial: "marker", locals: {pal: pal})
       }
     end
   end

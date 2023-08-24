@@ -1,12 +1,34 @@
 <h2>Create your booking with <%= @pal.name %></h2>
 <div class="container">
   <div class="d-flex">
-      <div class="card-1 mt-0 justify-content-center">
-        <div class="card-image">
-          <img src="https://thispersondoesnotexist.com/" alt="Person Image" class="pal-name px-0">
-        </div>
-        <div class="card-pal-name m-4">
-            <h4><%= @pal.name %></h4>
+    <div class="card-1">
+        <h1>
+         <%= cl_image_tag @pal.photo.key, crop: :fill , class: "card-image"%>
+          <%= @pal.name %>
+          <br>
+          <% @pal.rating.times do %>
+            <span class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></span>
+          <% end %>
+          <% (5 - @pal.rating).times do %>
+            <span class="d-none">☆</span>
+          <% end %>
+        </h1>
+    </div>
+    </div>
+    <div class="container">
+    <div class="card-2">
+        <p><strong>Pal's name:</strong> <%= @pal.name %></p>
+        <p><strong>Pal's location:</strong> <%= @pal.location %></p>
+        <p><strong>Pal's price:</strong> £<%= @pal.price %></p>
+        <p><strong>Pal's rating:</strong> <%= @pal.rating %></p>
+        <div class="button-container">
+      </div>
+    </div>
+      <div class="card-3">
+      <%= simple_form_for [@pal, @booking], html: { class: 'form' } do |f| %>
+        <div class="form-group">
+          <%= f.input :start_date, html5: true, input_html: { class: 'form-control' } %>
+
         </div>
         <div class="card-pal-stars">
             <i class="fa-solid fa-star" style="color: rgba(255, 199, 0, 1);"></i>
