@@ -2,6 +2,7 @@ body {
   background-color: rgb(255, 98, 0);
 }
 
+
 .container {
   display: flex;
   flex-direction: row;
@@ -28,9 +29,22 @@ body {
   align-items: center;
   color: black;
   text-align: center;
+  width:600px;
 }
 
 .card-2{
+  padding: 20px;
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border: 5px solid black;
+  border-radius: 15px;
+  text-align: left;
+  color: black;
+}
+
+.card-3{
   flex: 1;
   padding: 20px;
   margin: 10px;
@@ -55,12 +69,29 @@ body {
 .card-image {
   margin-top: 12px;
   width: 90%;
-  height: 65%;
+  height: 5%;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  border: 5px solid black;
+  border-radius: 15px;
 }
 
 .button-container {
   text-align: center;
   border-radius: 10px;
+}
+
+.row {
+  flex: 1;
+  padding: 20px;
+  margin: 50px 10px 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border: 5px solid black;
+  border-radius: 15px;
+  text-align: left;
+  color: black;
 }

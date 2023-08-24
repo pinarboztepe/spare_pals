@@ -1,14 +1,17 @@
 <h1>My Bookings List</h1>
-
-<% @current_user.bookings.each do |booking| %>
-  <div class="booking-card">
-    <ul>
-      <li>
-        The booking number: <%= booking.id %> with <%= booking.pal.name %>
-        Start Date: <%= booking.start_date %>
-        End Date: <%= booking.end_date %>
-        <%= link_to "View Details", booking_path(booking), class: "btn btn-primary" %>
-      </li>
-    </ul>
-  </div>
-<% end %>
+<div class=container>
+    <div class="cards_wrapper">
+      <% @current_user.bookings.each do |booking| %>
+        <div class="booking_card" style="width: 18rem;">
+          <%= cl_image_tag booking.pal.photo.key, crop: :fill%>
+            <h4><strong> <%= booking.pal.name %> </strong></h4>
+            <p> Booking Number: <%= booking.id %> </p>
+            <p> Start Date: <%= booking.start_date %> </p>
+            <p> End Date: <%= booking.end_date %> </p>
+            <p class= "comments" > Comments: <%= booking.comments %>
+           <br>
+            <%= link_to "Cancel this booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        </div>
+      <% end %>
+    </div>
+</div>
