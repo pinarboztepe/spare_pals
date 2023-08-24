@@ -28,8 +28,9 @@
             <div class=“form-group”>
               <%= f.input :comments, input_html: { class: 'form-control' } %>
             </div>
-            <%= f.button :submit, 'Create Bookings', class: 'btn btn-warning' %>
-          <% end %>
+            <div class="btn"><%= f.button :submit, 'Create Bookings' %>
+            <% end %>
+            </div>
         </div>
         <div class="card-2">
             <p><strong>Pal's name:</strong> <%= @pal.name %></p>
