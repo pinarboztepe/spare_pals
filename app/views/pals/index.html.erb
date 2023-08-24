@@ -1,18 +1,22 @@
-
 <div class="index_container">
-  <h1>Available Pals</h1>
+  <div class="header">
+    <h2>Available Pals</h2>
+    <div class="filters">
+      <h2>map</h2>
+    </div>
+  </div>
   <div class="cards_wrapper">
     <% @pals.each do |pal| %>
-      <div class="pal_card">
-      <%# <div class="pal_img"> %>
+      <%= link_to pal_path(pal), class: "pal_card myDIV" do %>
         <img class="img">
-        <h3 class="pal_name"><%= link_to pal.name, pal_path(pal) %></h3>
+        <h3 class="pal_name"><%= pal.name %></h3>
+        <div class="hide-me">Hang with me!</div>
         <div class="stars">
-        <% pal.rating.times do %>
-        <h3>⭐️</h3>
-        <% end %>
+          <% pal.rating.times do %>
+            <h3><i class="fa-solid fa-star" style="color: #ffd000;"></i></h3>
+          <% end %>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>
