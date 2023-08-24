@@ -118,6 +118,7 @@ GEM
     ffi (1.15.5)
     font-awesome-sass (6.4.2)
       sassc (~> 2.0)
+    geocoder (1.8.2)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.14.1)
@@ -277,10 +278,9 @@ GEM
     zeitwerk (2.6.11)
 
 PLATFORMS
-  x86_64-darwin-21
   x86_64-darwin-20
+  x86_64-darwin-21
   x86_64-darwin-22
-
   x86_64-linux
 
 DEPENDENCIES
@@ -292,6 +292,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass (~> 6.1)
+  geocoder
   importmap-rails
   jbuilder
   pg (~> 1.1)
