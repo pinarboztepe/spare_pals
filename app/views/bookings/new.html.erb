@@ -1,10 +1,13 @@
 
-<h2>Create your booking with <%= @pal.name %></h2>
-<div class="container mt-0">
-  <div class="d-flex">
-    <div class="card-1">
+<h1>Hangout with <%= @pal.name %></h1>
+<div class="booking-container mt-0">
+  <div class="image-box">
+    <div class="image-card">
         <h1>
          <%= cl_image_tag @pal.photo.key, crop: :fill , class: "card-image"%>
+         </h1>
+          <br>
+          <h1>
           <%= @pal.name %>
           <br>
           <% @pal.rating.times do %>
@@ -14,11 +17,16 @@
             <span class="d-none">☆</span>
           <% end %>
         </h1>
+        <br>
+        <h3>
+          <%= @pal.intro %>
+        </h3>
     </div>
     </div>
-    <div class="container mt-0">
+    <div class="intra-booking-container mt-0">
       <div>
-        <div class="row mt-0">
+        <div class="calendar-booking">
+        <h2>When are you free?</h2>
           <%= simple_form_for [@pal, @booking], html: { class: 'form' } do |f| %>
             <div class="form-group">
                 <%= f.input :start_date, html5: true, input_html: { class: 'form-control', min: Date.today.strftime('%Y-%m-%d') } %>
@@ -29,17 +37,17 @@
             <div class="form-group">
               <%= f.input :comments, input_html: { class: 'form-control' } %>
             </div>
-            <div class="btn">
+            <%# <div class="btn"> %>
               <%= f.button :submit, 'Create Booking' %>
-            </div>
+            <%# </div> %>
           <% end %>
         </div>
 
-        <div class="card-2">
-            <p><strong>Pal's name:</strong> <%= @pal.name %></p>
-            <p><strong>Pal's location:</strong> <%= @pal.location %></p>
-            <p><strong>Pal's price per day:</strong> £<%= @pal.price %></p>
-            <p><strong>Pal's rating:</strong> <%= @pal.rating %></p>
+        <div class="new-booking-info">
+            <%# <p><strong>Hi! I'm</strong><br><h2> <%= @pal.name %></h2></p>
+            <p><strong>I'm here:</strong><br><h2> <%= @pal.location %></h2></p>
+            <p><strong>My price/hr:</strong><br><h2> £<%= @pal.price %></h2></p>
+            <%# <p><strong>My rating:</strong><br><h2><%= @pal.rating %></h2></p>
             <%# <div class="button-container"></div> %>
         </div>
     </div>
