@@ -28,9 +28,22 @@ body {
   align-items: center;
   color: black;
   text-align: center;
+  width:600px;
 }
 
 .card-2{
+  padding: 20px;
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border: 5px solid black;
+  border-radius: 15px;
+  text-align: left;
+  color: black;
+}
+
+.card-3{
   flex: 1;
   padding: 20px;
   margin: 10px;
@@ -53,14 +66,122 @@ body {
 }
 
 .card-image {
-  margin-top: 12px;
-  width: 90%;
-  height: 65%;
+  // margin-top: 12px;
+  width: 100%;
+  height: 5%;
   justify-content: center;
   align-items: center;
+  object-fit: contain;
+  padding: 0;
+  margin: 0;
+  border: 5px solid black;
+  border-radius: 15px;
 }
 
-.button-container {
-  text-align: center;
-  border-radius: 10px;
+.btn {
+  margin-top: 20px;
+  justify-content: center;
+  border-radius: 25px;
+  border: 5px solid black;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 50px;
 }
+
+.btn:hover {
+  border: 5px solid black;
+  color:  rgb(255, 255, 255);
+  transform:translateY(-12px);
+  transition: 0.3s;
+  box-shadow: 0px 10px 0px #000000;
+  cursor: pointer;
+  background-color: #0000ff
+}
+
+.row {
+  flex: 1;
+  padding: 20px;
+  margin: 50px 10px 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border: 5px solid black;
+  border-radius: 15px;
+  text-align: left;
+  color: black;
+}
+
+.new-booking-info {
+  border: 5px solid black;
+  border-radius: 12px;
+  background-color: white;
+  padding: 20px;
+  color: black;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+h2 {
+  font-family: 'Dela Gothic One', cursive;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 0px;
+}
+
+h1 {
+  font-family: 'Dela Gothic One', cursive;
+}
+
+.booking-container {
+  width: 100%;
+  display: flex;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.calendar-booking {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 50px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  // box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border: 5px solid black;
+  border-radius: 15px;
+  text-align: left;
+  color: black;
+}
+
+.intra-booking-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+ .image-box {
+  display: flex;
+  margin: 0px;
+ }
+
+ .image-card {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border: 5px solid black;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  width:600px;
+ }

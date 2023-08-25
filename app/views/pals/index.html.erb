@@ -1,18 +1,47 @@
-
-<div class="index_container">
-  <h1>Available Pals</h1>
-  <div class="cards_wrapper">
-    <% @pals.each do |pal| %>
-      <div class="pal_card">
-      <%# <div class="pal_img"> %>
-        <img class="img">
-        <h3 class="pal_name"><%= link_to pal.name, pal_path(pal) %></h3>
-        <div class="stars">
-        <% pal.rating.times do %>
-        <h3>⭐️</h3>
-        <% end %>
-        </div>
-      </div>
-    <% end %>
+<div class="index_container" data-controller="insert-map-in-index">
+  <div class="header">
+    <h2>Available Pals</h2>
+    <div class="filters" data-action="click->insert-map-in-index#mapShows">
+      <h2 data-insert-map-in-index-target="h2">map view</h2>
+    </div>
   </div>
+    <div class="cards_wrapper" data-insert-map-in-index-target="peopleIndex">
+      <% @pals.each do |pal| %>
+        <%= link_to new_pal_booking_path(pal), class: "pal_card myDIV" do %>
+          <%= cl_image_tag pal.photo.key, crop: :fill %>
+          <div class="pal_info">
+            <div class="trait">
+              <h6>Name:</h6>
+              <h6><%= pal.name %></h6>
+            </div>
+            <div class="trait">
+              <h6>Job:</h6>
+              <h6><%= pal.job %></h6>
+            </div>
+            <div class="trait">
+              <h6>Fav emoji:</h6>
+              <h6><%= pal.emoji %></h6>
+            </div>
+            <div class="trait">
+              <h6>In a word:</h6>
+              <h6><%= pal.word %></h6>
+            </div>
+          </div>
+          <div class="hide-me">Hang with me!</div>
+          <div class="stars">
+            <% pal.rating.times do %>
+              <h3><i class="fa-solid fa-star" style="color: #0000FF;"></i></h3>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div  data-controller="map"
+          data-insert-map-in-index-target="peopleMap"
+          data-map-markers-value="<%= @markers.to_json %>"
+          id="map"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+          style="width: 100%; height: 600px;"
+          class="cards_wrapper">
+    </div>
 </div>

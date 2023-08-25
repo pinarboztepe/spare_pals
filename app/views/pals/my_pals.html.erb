@@ -1,0 +1,32 @@
+<div class="flex-container">
+<h1>My Added Pals</h1>
+  <div class="wrapper">
+    <% @my_pals.each do |pal| %>
+    <div class="mypals_card" style="width: 18rem;">
+      <%= cl_image_tag pal.photo.key, crop: :fill %>
+        <div class="pal_info">
+          <div class="trait">
+            <h6>Name:</h6>
+            <h6><%= pal.name %></h6>
+          </div>
+          <div class="trait">
+            <h6>Job:</h6>
+            <h6><%= pal.job %></h6>
+          </div>
+          <div class="trait">
+            <h6>Fav emoji:</h6>
+            <h6><%= pal.emoji %></h6>
+           </div>
+          <div class="trait">
+            <h6>In a word:</h6>
+            <h6><%= pal.word %></h6>
+          </div>
+          <br>
+          <div class="btn">
+          <%= link_to "Delete Profile", pal_path(pal), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

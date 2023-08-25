@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
 
+  resources :pals, only: [:destroy]
+
+  get "/my_pals", to: "pals#my_pals"
+
   # This bookings routes is to show all current_user bookings (without any pal id)
   resources :bookings, only: [:index, :show, :destroy]
 end

@@ -3,7 +3,15 @@ class PalsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @pals = Pal.all
+    @pals = Pal.all.order(created_at: :desc)
+    @markers = @pals.geocoded.map do |pal|
+      {
+        lat: pal.latitude,
+        lng: pal.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {pal: pal}),
+        marker_html: render_to_string(partial: "marker", locals: {pal: pal})
+      }
+    end
   end
 
   def show
@@ -17,16 +25,30 @@ class PalsController < ApplicationController
   def create
     @pal = Pal.new(pal_params)
     @pal.user = current_user
+    if @pal.rating.nil?
+      @pal.rating = 0
+    end
     if @pal.save
-      redirect_to pal_path(@pal)
+      redirect_to pals_path
     else
       render :new, status: :unprocessable_entity
     end
   end
 
+  def my_pals
+    @my_pals = current_user.pals.order(created_at: :desc)
+  end
+
+  def destroy
+    @pal = Pal.find(params[:id])
+    @pal.destroy
+    flash[:warning] = 'Profile has been deleted.'
+    redirect_to my_pals_path
+  end
+
   private
 
   def pal_params
-    params.require(:pal).permit(:name, :location, :price)
+    params.require(:pal).permit(:name, :location, :price, :photo, :emoji, :job, :word)
   end
 end

@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <h6 class="navbar_text"><strong>Spare Pals</strong></h6>
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <h6 class="navbar_text"><strong>Spare Pals 👬</strong></h6>
       <%# <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>
 
@@ -20,11 +20,12 @@
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
+            <img src="https://cdn-icons-png.flaticon.com/512/1912/1912097.png" alt="friends" width="50" height="45">
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My bookings", bookings_path, class: "dropdown-item" %>
               <%= link_to "Add a new pal", new_pal_path, class: "dropdown-item" %>
+              <%= link_to "My added pals", my_pals_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>

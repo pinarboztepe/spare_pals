@@ -31,7 +31,6 @@ class BookingsController < ApplicationController
     redirect_to bookings_path, notice: 'Booking has been deleted!'
   end
 
-
   private
 
   def booking_params
