@@ -170,17 +170,17 @@ mary.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 mary.save!
 
 moana = Pal.new(
-  name: "Moana",
+  name: "Greg",
   location: "Catford, London",
   price: 800,
   user: george,
   rating: 4,
   emoji: "🤡",
   job: "tax man",
-  intro: "Hello, I'm Moana. I'm a music lover, and a DIY hobbyist. Life is all about exploring passions?",
+  intro: "Hello, I'm Greg. I'm a music lover, and a DIY hobbyist. Life is all about exploring passions?",
   word: "basic"
 )
-file = URI.open("https://marvel-b1-cdn.bc0a.com/f00000000260899/www.heidrick.com/-/media/heidrickcom/images/consultants/m/macdonald_mary_18553/macdonald_mary_860x860.jpg")
+file = URI.open("https://images.squarespace-cdn.com/content/v1/5dfb51321047cf33eb90b6df/1581602814946-NLSD2Y3725ASHPBDEFQ2/Nick-MyHeartSkipped-1948.jpg")
 moana.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 moana.save!
 
