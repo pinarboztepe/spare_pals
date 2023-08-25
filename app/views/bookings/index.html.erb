@@ -4,14 +4,16 @@
     <div class="cards_wrapper">
       <% @current_user.bookings.each do |booking| %>
         <div class="booking_card" style="width: 18rem;">
-          <%= cl_image_tag booking.pal.photo.key, crop: :fill%>
+                <%= cl_image_tag booking.pal.photo.key, class:"border-image", crop: :fill%>
             <h4><strong> <%= booking.pal.name %> </strong></h4>
             <p> Booking Number: <%= booking.id %> </p>
-            <p> Start Date: <%= booking.start_date %> </p>
-            <p> End Date: <%= booking.end_date %> </p>
+            <p> Start Date: <%= booking.start_date.strftime( "%m/%d/%Y") %> </p>
+            <p> End Date: <%= booking.end_date.strftime( "%m/%d/%Y") %> </p>
             <p class= "comments" > Comments: <%= booking.comments %>
            <br>
-            <%= link_to "Cancel this booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            <div class="btn-cancel">
+            <h5><%= link_to "Cancel this booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></h5>
+            </div>
         </div>
       <% end %>
     </div>
