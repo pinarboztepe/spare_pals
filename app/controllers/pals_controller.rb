@@ -3,7 +3,7 @@ class PalsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @pals = Pal.all
+    @pals = Pal.all.order(created_at: :desc)
     @markers = @pals.geocoded.map do |pal|
       {
         lat: pal.latitude,
@@ -33,8 +33,10 @@ class PalsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
 
-
+  def my_pals
+    @my_pals = current_user.pals.order(created_at: :desc)
   end
 
   private
