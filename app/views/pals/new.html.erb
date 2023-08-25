@@ -1,10 +1,23 @@
-<div class="container">
-<h1>Add a New Pal</h1>
+<h1>Rent out your own pal!</h1>
+<div class="container p-5">
   <%= simple_form_for(@pal) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :location %>
-    <%= f.input :price %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit %>
-  <% end %>
+  <div class="row">
+    <div class="col">
+      <%= f.input :name %>
+      <%= f.input :emoji %>
+    </div>
+    <div class="col">
+      <%= f.input :location %>
+      <%= f.input :word %>
+    </div>
+    <div class="col">
+      <%= f.input :job %>
+      <%= f.input :price %>
+    </div>
+      <%= f.input :intro %>
+    <div class="col">
+      <%= f.input :photo, as: :file %>
+      <div class="mt-4"><%= f.submit %></div>
+    </div>
+    <% end %>
 </div>
