@@ -28,9 +28,7 @@
         <div class="calendar-booking">
         <h2>When are you free?</h2>
           <%= simple_form_for [@pal, @booking], html: { class: 'form' } do |f| %>
-
             <%= f.input :start_date, html5: true, input_html: { min: Date.today.strftime('%Y-%m-%d') } %>
-
             <%= f.input :end_date, html5: true, input_html: { min: Date.today.strftime('%Y-%m-%d') } %>
             <div class="form-group">
               <%= f.input :comments, input_html: { class: 'form-control' } %>
