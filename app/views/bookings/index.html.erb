@@ -2,7 +2,7 @@
 
 <div class=container>
     <div class="cards_wrapper">
-      <% @current_user.bookings.each do |booking| %>
+      <% @current_user.bookings.order(created_at: :desc).each do |booking| %>
         <div class="booking_card" style="width: 18rem;">
                 <%= cl_image_tag booking.pal.photo.key, class:"border-image", crop: :fill%>
             <h4><strong> <%= booking.pal.name %> </strong></h4>
@@ -18,7 +18,6 @@
       <% end %>
     </div>
 </div>
-
 <% if flash[:warning] %>
   <div class="alert alert-warning">
     <%= flash[:warning] %>
