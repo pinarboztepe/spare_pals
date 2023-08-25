@@ -8,7 +8,6 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-
   def new
     @pal = Pal.find(params[:pal_id])
     @booking = Booking.new
@@ -22,7 +21,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to bookings_path
     else
-      render:new
+      render :new
     end
   end
 
@@ -36,7 +35,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-  params.require(:booking).permit(:start_date, :end_date, :comments)
+    params.require(:booking).permit(:start_date, :end_date, :comments)
   end
 
 end
