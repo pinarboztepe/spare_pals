@@ -7,8 +7,8 @@
                 <%= cl_image_tag booking.pal.photo.key, class:"border-image", crop: :fill%>
             <h4><strong> <%= booking.pal.name %> </strong></h4>
             <p> Booking Number: <%= booking.id %> </p>
-            <p> Start Date: <%= booking.start_date.strftime( "%m/%d/%Y") %> </p>
-            <p> End Date: <%= booking.end_date.strftime( "%m/%d/%Y") %> </p>
+            <p> Start Date: <%= booking.start_date.strftime("%m/%d/%Y") %> </p>
+            <p> End Date: <%= booking.end_date.strftime("%m/%d/%Y") %> </p>
             <p class= "comments" > Comments: <%= booking.comments %>
            <br>
             <div class="btn-cancel">

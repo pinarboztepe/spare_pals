@@ -2,7 +2,6 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = current_user.bookings
-
   end
 
   def show
@@ -30,19 +29,16 @@ class BookingsController < ApplicationController
     end
   end
 
-
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    flash[:warning] = 'Booking has been deleted.'
-    redirect_to bookings_path
+    redirect_to bookings_path, notice: 'Booking has been deleted!'
   end
-
 
   private
 
   def booking_params
-  params.require(:booking).permit(:start_date, :end_date, :comments)
+    params.require(:booking).permit(:start_date, :end_date, :comments)
   end
 
 end
