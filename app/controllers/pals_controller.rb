@@ -29,15 +29,17 @@ class PalsController < ApplicationController
       @pal.rating = 0
     end
     if @pal.save
-      redirect_to pal_path(@pal)
+      redirect_to pals_path
     else
       render :new, status: :unprocessable_entity
     end
+
+
   end
 
   private
 
   def pal_params
-    params.require(:pal).permit(:name, :location, :price, :photo)
+    params.require(:pal).permit(:name, :location, :price, :photo, :emoji, :job, :word)
   end
 end
