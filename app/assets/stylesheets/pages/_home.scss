@@ -1,5 +1,9 @@
 // Specific CSS for your home-page
 
+html {
+  cursor: url("./assets/images/avatar.png");
+}
+
 body {
   // background-color: aqua;
   justify-content: center;
@@ -15,8 +19,11 @@ body {
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin-left: 300px;
-  margin-right: 300px;
+  // margin-left: 300px;
+  // margin-right: 300px;
+  display: flex;
+  flex-direction: column;
+  // flex-grow: 1;
   h1 {
     font-size: 7em;
     color: white;
@@ -33,4 +40,47 @@ body {
   .hero_btn {
     margin-top: 50px;
   }
+}
+
+.top-box {
+  justify-content: center;
+  top: 50px;
+  z-index: 10;
+  // display: none;
+}
+
+.middle-box {
+  text-align: center;
+  justify-content: center;
+}
+
+.bottom-box {
+ text-align: left;
+}
+
+.hero-type {
+  transition-delay: 2000;
+  transform-origin: center;
+  transition: 2s;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: #0000ff;
+  // border-radius: 100px;
+  border: solid 5px rgb(0, 0, 0);
+  box-shadow: 50px 50px 0px #000000;
+}
+
+.description {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: black;
+  // background-color: white;
+  color: black;
+  border: solid 5px black;
+  border-radius: 50px;
+
 }
