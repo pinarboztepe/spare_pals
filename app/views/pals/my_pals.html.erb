@@ -22,8 +22,8 @@
             <h6><%= pal.word %></h6>
           </div>
           <br>
-          <div class="btn">
-          <%= link_to "Delete Profile", pal_path(pal), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          <div class="btn-cancelpal">
+          <h5> <%= link_to "Delete Profile", pal_path(pal), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></h5>
           </div>
         </div>
       </div>

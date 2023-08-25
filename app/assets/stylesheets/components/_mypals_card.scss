@@ -7,10 +7,34 @@
   flex-wrap: wrap;
 }
 
+.btn-cancelpal {
+  margin-top: 20px;
+  justify-content: center;
+  border-radius: 25px;
+  border: 5px solid black;
+  background-color: red;
+  width: 100%;
+  height: 50px;
+}
+.btn-cancelpal h5 {
+  padding-top: 6px;
+}
+.btn-cancelpal:hover {
+  border: 3px solid black;
+  color:  red;
+  transform:translateY(-12px);
+  transition: 0.3s;
+  box-shadow: 0px 10px 0px #000000;
+  cursor: pointer;
+  background-color: red;
+  text-decoration: none;
+}
+
+
 .mypals_card {
   margin: 20px;
   width: 18rem;
-  border: 2px solid #333;
+  border: 5px solid #333;
   border-radius: 8px;
   background-color: #f7f7f7;
   color: #333;
@@ -42,7 +66,7 @@
 
   a {
     text-decoration: none;
-    color: #007bff;
+    color: white;
     margin-top: 10px;
 
     &:hover {
