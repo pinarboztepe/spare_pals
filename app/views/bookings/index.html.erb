@@ -15,3 +15,9 @@
       <% end %>
     </div>
 </div>
+
+<% if flash[:warning] %>
+  <div class="alert alert-warning">
+    <%= flash[:warning] %>
+  </div>
+<% end %>
