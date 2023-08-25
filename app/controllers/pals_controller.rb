@@ -39,6 +39,13 @@ class PalsController < ApplicationController
     @my_pals = current_user.pals.order(created_at: :desc)
   end
 
+  def destroy
+    @pal = Pal.find(params[:id])
+    @pal.destroy
+    flash[:warning] = 'Profile has been deleted.'
+    redirect_to my_pals_path
+  end
+
   private
 
   def pal_params
