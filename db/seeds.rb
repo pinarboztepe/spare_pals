@@ -36,7 +36,7 @@ dave.save!
 
 taylor = Pal.new(
   name: "Taylor",
-  location: "Camden, London",
+  location: "Kirkwall, United Kingdom",
   price: 40,
   user: bobby,
   rating: 3,
