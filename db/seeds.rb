@@ -29,14 +29,14 @@ george = User.create(email: "georgeh@lewagon.com", password: "556677889", userna
 # Pal.create(name: "Franz", location: "Morden, London", price: 80, user: george, rating: 5)
 # Pal.create(name: "Krist", location: "Walthamstow, London", price: 57, user: george, rating: 3)
 # =======
-dave = Pal.new(name: "Dave", location: "Hoxton, London", price: 30, user: bobby, rating: 4)
-file = URI.open("https://sharpfocusphoto.com/wp-content/uploads/2020/08/DSC_0275.jpg")
-dave.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-dave.save!
+# dave = Pal.new(name: "Dave", location: "Hoxton, London", price: 30, user: bobby, rating: 4)
+# file = URI.open("https://sharpfocusphoto.com/wp-content/uploads/2020/08/DSC_0275.jpg")
+# dave.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# dave.save!
 
 taylor = Pal.new(
   name: "Taylor",
-  location: "Camden, London",
+  location: "Kirkwall, United Kingdom",
   price: 40,
   user: bobby,
   rating: 3,
