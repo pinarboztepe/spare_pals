@@ -3,18 +3,18 @@
   <%= simple_form_for(@pal) do |f| %>
   <div class="row">
     <div class="col">
-      <%= f.input :name %>
-      <%= f.input :emoji %>
+      <%= f.input :name, :label => "Name of pal" %>
+      <%= f.input :emoji, :label => "Fav emoji" %>
     </div>
     <div class="col">
       <%= f.input :location %>
-      <%= f.input :word %>
+      <%= f.input :word, :label => "Your pal in 1 word" %>
     </div>
     <div class="col">
-      <%= f.input :job %>
-      <%= f.input :price %>
+      <%= f.input :job, :label => "What does your pal do?" %>
+      <%= f.input :price, :label => "Hangout price per day (£)" %>
     </div>
-      <%= f.input :intro %>
+      <%= f.input :intro, :label => "Write a short intro for your pal" %>
     <div class="col">
       <%= f.input :photo, as: :file %>
       <div class="mt-4"><%= f.submit %></div>
