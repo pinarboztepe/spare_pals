@@ -15,21 +15,28 @@ class BookingsController < ApplicationController
 
   def create
     @pal = Pal.find(params[:pal_id])
-    @booking = Booking.new(booking_params)
-    @booking.pal = @pal
-    @booking.user = current_user
-    if @booking.save
-      redirect_to bookings_path
+    if @pal.user_id != current_user.id
+      @booking = Booking.new(booking_params)
+      @booking.pal = @pal
+      @booking.user = current_user
+      if @booking.save
+        redirect_to bookings_path
+      else
+        render :new
+      end
     else
-      render:new
+      redirect_to pals_path, alert: 'You cannot create bookings with pals you have added!'
     end
   end
+
 
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to bookings_path, alert: 'Booking has been deleted.'
+    flash[:warning] = 'Booking has been deleted.'
+    redirect_to bookings_path
   end
+
 
   private
 
