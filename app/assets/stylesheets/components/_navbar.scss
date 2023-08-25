@@ -1,11 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
+
   // background: white;
   a {
     color: black;
   }
   a:hover{
-    color: rgb(0, 255, 0);
+    color: white;
   }
 }
 
@@ -15,4 +16,10 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.dropdown-menu {
+  a:hover{
+    color: orange
+  }
 }
